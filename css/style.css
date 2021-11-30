@@ -1,0 +1,602 @@
+body{
+    font-family:"San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-size: 1.2em;
+}
+
+p{
+    display:block;
+}
+
+h1.maintitle{
+    font-variant: small-caps;
+    text-align:center;
+}
+
+.subtitle{
+    color: darkgrey;
+    display: block;
+    font-weight:normal;
+}
+
+/* table specs */
+
+table.boxed{
+    border:solid black 1pt;
+    border-collapse: collapse;
+    font-size: 1em;
+    margin:1em;
+}
+
+td.SegmOnto,td.TEI{
+    border:solid black 1pt;
+    font-size: 1em;
+    margin:1em;
+    padding: 1em;
+}
+
+
+
+table{
+    border:solid black 1pt;
+    border-collapse: collapse;
+    font-size: 1em;
+    margin:1em;
+}
+
+table.wovenodd td{
+    border:solid black 0.5pt;
+    border-collapse: collapse;
+    padding:1ex 1ex 1ex 1ex;
+    margin:1em;
+}
+
+
+/* The side navigation menu */
+nav {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Sidebar */
+
+nav .nav_header{
+    background-color: #d22100;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    display:block;
+    font-size:larger;  
+}
+nav .project{
+    text-align: left;
+}
+
+nav .version{
+    float: right;
+    font-style: italic;
+}
+
+nav .menu{
+    padding-left:20px;
+}
+
+/* Sidebar links */
+nav a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    display: inline;
+}
+
+button{
+    border:none;
+    background-color: inherit;
+    font-size: 1em;
+}
+
+not_accordion{
+    display: inline;
+}
+
+.accordion{
+    display: inline;
+    width: 100%;
+    text-align: left;
+}
+
+.active, .accordion:hover {
+    background-color: inherit;
+    display: inline;
+}
+
+.accordion:after {
+    content: '\002B';
+    font-weight: bold;
+    float: right;
+    margin-right: 20px;
+    padding-right:5px;
+    padding-left:5px;
+    padding-bottom:1px;
+    background-color: #d22100;
+    border-radius: 25% 10%;
+  }
+
+.active:after {
+    content: "\2212";
+    display: inline;
+}
+
+.list {
+    list-style-type: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.sublist{
+    list-style-type: none;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+ul.items {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
+
+/* Active/current link */
+nav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Links on mouse-over */
+nav a:hover:not(.active) {
+    color:#d22100;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.main {
+    margin-left: 300px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+    nav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    nav a {
+        float: left;
+    }
+    div.content {
+        margin-left: 0;
+    }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    nav a {
+        text-align: center;
+        float: none;
+    }
+} 
+
+/* literal code */
+
+span.element{
+    color:darkblue;
+    font-family: "Courier New", monospace, sans-serif;
+}
+a.element{
+    color:darkblue;
+    font-family: "Courier New", monospace, sans-serif;
+}
+span.gi{
+    color:darkblue;
+    font-family: "Courier New", monospace, sans-serif;
+}
+a.link_ref{
+    color:darkblue;
+}
+span.attribute{
+    color:DarkOrange;
+    font-family: "Courier New", monospace, sans-serif;
+}
+span.att{
+    color:DarkOrange;
+    font-family: "Courier New", monospace, sans-serif;
+}
+span.att::before{
+    content: "@";
+    font-family: "Courier New", monospace, sans-serif;
+}
+span.attributevalue{
+    color:SaddleBrown;
+    font-family: "Courier New", monospace, sans-serif;
+}
+span.val{
+    color:SaddleBrown;
+    font-family: "Courier New", monospace, sans-serif;
+}
+
+div.cdata{
+    white-space:pre;
+    clear:both;
+    font-family: "Courier New", monospace, sans-serif;
+}
+
+.pre_eg, .pre{
+    background-color:WhiteSmoke; 
+}
+
+pre,
+div.pre,
+div.pre_eg,
+pre.eg,
+div.eg{
+    clear:both;
+    margin-top:1em;
+    margin-bottom:1em;
+    padding-top:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    color:#000000;
+    line-height:1em;
+    font-family: "Courier New", monospace, sans-serif;
+    white-space: pre-line;
+    font-size: 0.8em;
+    border-radius: 15px;
+}
+
+.cdata{
+    background-color:PeachPuff;
+    border-radius: 15px;
+}
+
+div.egXML_valid{
+    background-color:PeachPuff;
+    border-radius: 15px;
+}
+div.egXML_feasible{
+    background-color:Tomato;
+    border-radius: 15px;
+}
+div.egXML_invalid{
+    border-color:#ffe7e8;
+    background-color:#fdbbac;
+    border-radius: 15px;
+}
+
+
+/* general purpose block aligns */
+.centerbold{
+    text-align:center;
+    font-weight:bold;
+}
+.center{
+    text-align:center;
+}
+.right{
+    text-align:right;
+}
+.left{
+    text-align:left;
+}
+
+/* <hi> rend values */
+span.typewriter{
+    font-family: "Courier New", monospace, sans-serif;
+}
+span.normalweight{
+    font-weight:normal;
+}
+span.smallcaps{
+    font-variant:small-caps;
+}
+span.bold{
+    font-weight:bold;
+}
+span.italic{
+    font-style:italic;
+}
+span.allcaps{
+    text-transform:uppercase;
+}
+span.strikethrough{
+    text-decoration:line-through;
+}
+span.doublestrikethrough{
+    text-decoration:line-through;
+}
+span.underline{
+    text-decoration:underline;
+}
+span.wavyunderline{
+    text-decoration-line:underline;
+    text-decoration-style:wavy;
+}
+span.doubleunderline{
+    text-decoration:underline;
+}
+span.superscript{
+    vertical-align:super;
+    font-size:smaller;
+}
+span.subscript{
+    vertical-align:bottom;
+    font-size:smaller;
+}
+span.numberParagraph:before{
+    content:"[";
+}
+span.numberParagraph:after{
+    content:"] ";
+}
+span.numberParagraph{
+    font-size:smaller;
+    color:grey;
+}
+
+/* misc inline*/
+
+span.foreign{
+    font-style:italic;
+}
+
+span.distinct{
+  font-style: italic;
+}
+
+/* generic rendition */
+.plain{
+    text-decoration:none;
+}
+
+.small{
+    font-size:small;
+}
+.term{
+    font-style:italic;
+}
+.hi{
+    font-style:italic;
+}
+.emph{
+    font-weight:bold;
+}
+.label{
+    font-weight:bold;
+}
+.mentioned{
+    font-style:italic;
+}
+
+/* transcription */
+
+div.sourceDoc{
+}
+
+div.surfaceGrp{
+    border-bottom-width:1pt;
+    border-bottom-color:green;
+    border-bottom-style:solid;
+    clear:both;
+}
+
+div.surface{
+    clear:both;
+    border-width:1pt;
+    border-style:solid;
+    border-color:grey;
+    margin-bottom:1ex;
+}
+
+div.zone{
+    border-width:1pt;
+    border-style:solid;
+    border-color:lightgrey;
+    margin-bottom:0.5ex;
+}
+
+div.line{
+}
+
+div.facsimage{
+    float:right;
+}
+div.facsimage img{
+    max-height:100%;
+    width:auto
+}
+
+span.damage{
+    border-bottom:1px dashed red;
+}
+span.ex {
+    font-style: italic;
+}
+/* app crit */
+div.appcrit{
+    border-top:solid black 1pt;
+    margin-top:2pt;
+    padding-top:2pt;
+    margin-bottom:2pt;
+    margin-left:1em;
+}
+div.app{
+    margin-top:1pt;
+    font-size:smaller;
+}
+span.lemma{
+}
+span.lemmawitness{
+    font-weight:bold;
+}
+span.listhead{
+    display:block;
+    margin-top:0em;
+    margin-right:1em;
+    padding-left:3px;
+    padding-right:3px;
+    font-weight:bold;
+}
+table.border td{
+    vertical-align:top;
+    border:1px solid black;
+    padding:2px;
+}
+table.border td.norules{
+    border-width:0px;
+    padding-top:6px;
+}
+table.border{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+.del{
+    text-decoration:line-through;
+}
+.red{
+    color:red;
+}
+.green{
+    color:green;
+}
+.orange{
+    color:orange;
+}
+
+/* notes */
+div.noteHeading{
+    margin-top:9pt;
+    border:0;
+    border-top:1pt;
+    border-style:solid;
+    padding-top:6pt;
+    font-size:larger;
+    font-weight:bold;
+}
+div.noteBody{
+    display:inline;
+}
+
+div.note{
+    margin-left:2em;
+    margin-right:2em;
+    margin-bottom:3pt;
+    margin-top:3pt;
+    text-indent:-1em;
+}
+
+span.noteLabel{
+    vertical-align:super;
+    font-size:smaller;
+    font-style:italic;
+}
+span.note:before{
+    content:" [";
+}
+span.note:after{
+    content:"] ";
+}
+
+span.note{
+    font-size:smaller;
+}
+
+/* images */
+.thumbnail img{
+    border-radius: 8px;
+    height:70px;
+    display:inline;
+    float: left; 
+    margin:10px;
+}
+
+.modal {
+    z-index:1;
+    display:none;
+    padding-top:10px;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background-color:rgb(0,0,0);
+    background-color:rgba(0,0,0,0.8)
+}
+
+.modal-content{
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#img01{
+    max-width:300px;
+}
+
+.modal-hover-opacity {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -webkit-backface-visibility:hidden
+}
+
+.modal-hover-opacity:hover {
+    opacity:0.60;
+    filter:alpha(opacity=60);
+    -webkit-backface-visibility:hidden
+}
+
+.close {
+    text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white
+}
+
+.container1 {
+    display:inline-block;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.modal-content, #caption {   
+  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}

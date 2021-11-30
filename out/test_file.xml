@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="SegmOnto.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="SegmOnto.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- @xml:id is mandatory -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ark">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <!-- title is mandatory -->
+            <title>Title</title>
+            <!-- author, editor, etc are recommended -->
+            <author xml:id="JM">
+               <persName>
+                  <forename>Jean</forename>
+                  <surname>Martin</surname>
+               </persName>
+            </author>
+            <editor xml:id="MM">
+               <persName>
+                  <forename>Micheline</forename>
+                  <surname>Martin</surname>
+               </persName>
+            </editor>
+            <respStmt xml:id="JD1">
+               <resp>annotated by</resp>
+               <persName>
+                  <forename>John</forename>
+                  <surname>Doe</surname>
+               </persName>
+            </respStmt>
+            <respStmt xml:id="JD2">
+               <resp>restructured by</resp>
+               <persName>
+                  <forename>Jane</forename>
+                  <surname>Doe</surname>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <!-- publicationStmt is mandatory -->
+         <publicationStmt>
+            <publisher>SegmOnto project</publisher>
+            <authority role="funder">Institution</authority>
+            <!-- the value of @n is open, not @status, because copyleft is not possible
+            according to the DARIAH legal group-->
+            <availability status="restricted" n="cc-by">
+               <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+            </availability>
+            <date when="2020-11-10"/>
+         </publicationStmt>
+         <!-- seriesStmt is recommended, if massive digitisation -->
+         <seriesStmt>
+            <title>Description of the series</title>
+         </seriesStmt>
+         <sourceDesc>
+            <!-- bibl is recommended but not mandatory (if manuscript) -->
+            <bibl>
+               <author>author</author>
+               <title>title</title>
+               <pubPlace>place of publication</pubPlace>
+               <publisher>publisher</publisher>
+               <date when="2020-11-10">date</date>
+            </bibl>
+            <!-- msDesc is mandatory also for printed texts to reference the
+            shelfmark of the document digitised -->
+            <msDesc>
+               <msIdentifier>
+                  <country>Country</country>
+                  <settlement>City</settlement>
+                  <repository>Library/archive</repository>
+                  <idno>Shelfmark</idno>
+               </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <!-- appInfo is mandatory, because an automatic transcription is produced
+         by a tool/engine/interface-->
+         <appInfo>
+            <application ident="eScriptorium" version="1">
+               <label>eScriptorium</label>
+               <ptr target="https://gitlab.inria.fr/scripta/escriptorium"/>
+            </application>
+            <application ident="Kraken" version="3.0.5">
+               <label>Kraken</label>
+               <ptr target="https://github.com/mittagessen/kraken"/>
+            </application>
+         </appInfo>
+         <!-- classDecl is mandatory, becuse we need to point to SegmOnto's definitions -->
+         <!-- We need to add subtypes -->
+         <classDecl>
+            <taxonomy xml:id="SegmOnto">
+               <bibl>
+                  <title>SegmOnto</title>
+                  <ptr target="https://github.com/segmonto"/>
+               </bibl>
+               <category xml:id="SegmOntoZones">
+                  <catDesc xml:id="DamageZone">
+                     <title>DamageZone</title>
+                     <ptr target="https://github.com/SegmOnto/examples/blob/main/zones/DamageZone/DamageZone.md"/>
+                  </catDesc>
+               </category>
+               <category xml:id="SegmOntoLines">
+                  <catDesc xml:id="DefaultLine">
+                     <title>DefaultLine</title>
+                     <ptr target="https://github.com/SegmOnto/examples/blob/main/lines/DefaultLine/DefaultLine.md"/>
+                  </catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
+         <!-- Important to describe the gold GT -->
+         <!-- How to point to the pages that have been corrected only? -->
+         <editorialDecl corresp="#automaticTranscription">
+            <!-- Add @status with closed values, for instance taken from Stutzmann classifiction of
+               transcriptions?  -->
+            <correction>
+               <p></p>
+            </correction>
+            <hyphenation>
+               <p></p>
+            </hyphenation>
+            <interpretation>
+               <p></p>
+            </interpretation>
+            <normalization>
+               <p></p>
+            </normalization>
+            <punctuation>
+               <p></p>
+            </punctuation>
+            <segmentation>
+               <p></p>
+            </segmentation>
+            <quotation>
+               <p></p>
+            </quotation>
+            <correction>
+               <p></p>
+            </correction>
+         </editorialDecl>
+      </encodingDesc>
+      <!--Mandatory for the GT -->
+      <profileDesc>
+         <langUsage>
+            <language ident="fr"/>
+         </langUsage>
+      </profileDesc>
+      <!-- Recommended if modification -->
+      <revisionDesc>
+         <change when="2020-11-10">An example of modification</change>
+      </revisionDesc>
+   </teiHeader>
+   <!-- automatic transcription -->
+   <sourceDoc xml:id="automaticTranscription">
+      <!-- Page -->
+      <surface xml:id="p1"
+                  type="page"
+                  source="uri">
+         <!-- Zone -->
+         <!-- @xml:id are important for the conversion to RDF. It is made of:
+            p+page number
+            z+zone number
+            l+line number
+            b pour baseline
+            t pour transcription
+            -->
+         <!-- @corresp points to a SegmOnto zone type, with a definition in SegmOnto's guidelines
+               online, whose address is referenced in Taxonomy. It has a closed list of values. It
+               is mandatory-->
+         <!-- @ana points to a SegmOnto subtype, defined in the teiHeader, in taxonomy.
+              It has an open list of values. It is not mandatory -->
+         <!-- @n is the numbering of zones or lines. It is not mandatory -->
+         <!-- @points has a modified value, without the comma because it is not x,y points -->
+         <!-- @source points to an URI/IIIF manifest -->
+         <zone xml:id="p1z1"
+                  corresp="#segmOntoZone"
+                  ana="#segmOntoZone:subtype"
+                  n="1"
+                  points="1 2 3 4 5 6"
+                  source="uri">
+            <!-- Mask of the line -->
+            <zone xml:id="p1z1l1"
+                  corresp="#segmOntoLine"
+                  ana="#segmOntoLine:subtype"
+                  n="1"
+                  points="1 2 3 4 5 6"
+                  source="uri">
+               <!-- baseline -->
+               <path xml:id="p1z1l1b"
+                  type="baseline"
+                  points="1 2 3 4 5 6"/>
+               <!-- transcription -->
+               <line xml:id="p1z1l1t">Some text</line>
+            </zone>
+         </zone>
+         <zone xml:id="p1z2"
+            corresp="#segmOntoZone"
+            ana="#segmOntoZone:subtype"
+            n="1"
+            points="1 2 3 4 5 6"
+            source="uri">
+            <zone xml:id="p1z2l2"
+               corresp="#segmOntoLine"
+               ana="#segmOntoLine:subtype"
+               n="1"
+               points="1 2 3 4 5 6"
+               source="uri">
+               <path xml:id="p1z2l1"
+                  type="baseline"
+                  points="1 2 3 4 5 6"/>
+               <line xml:id="p1b2l1">Some text</line>
+            </zone>
+         </zone>
+      </surface>
+      <surface xml:id="p2"
+         type="#segmOntoZone"
+         source="uri">
+         <!-- decoration without baseline -->
+         <zone cert="high" xml:id="p2z1"
+            corresp="#segmOntoZone"
+            ana="#segmOntoLine:subtype"
+            points="1 2 3 4 5 6"
+            source="uri">
+         </zone>
+      </surface>
+   </sourceDoc>
+   <text>
+      <body>
+         <pb corresp="#pageID"/>
+         <fw corresp="#numberingID">
+            <lb corresp="#lineID"/>page number
+         </fw>
+         <fw corresp="#runningTitleID">
+            <lb corresp="#lineID"/>running title
+         </fw>
+         <head corresp="#rubricID">
+            <lb corresp="#lineID"/>head
+         </head>
+         <note corresp="#marginID">
+            <lb corresp="#lineID"/>line
+         </note>
+         <p corresp="#mainID">
+            <hi corresp="#initialeID"/>
+            <lb corresp="#lineID"/>line
+            <lb corresp="#lineID"/>line
+            <figure corresp="#decorationID"/>
+         </p>
+         <figure corresp="#figureID"/>
+         <figure corresp="#stampID"/>
+         <fw corresp="#numberingID">
+            <lb corresp="#quireMarksID"/>quire number
+         </fw>
+      </body>
+   </text>
+</TEI>

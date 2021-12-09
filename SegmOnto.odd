@@ -1071,6 +1071,16 @@ Custom:Entry#2
             </constraintSpec>  
           </elementSpec>
           
+          <elementSpec ident="msIdentifier" mode="change">
+            <constraintSpec ident="repository_check" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:msIdentifier[parent::tei:msDesc]">
+                  <sch:assert test="./tei:repository">Element "msIdentifier" incomplete; missing required element "repository".</sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>  
+          </elementSpec>
+          
           <elementSpec ident="encodingDesc" mode="change">
             <constraintSpec ident="encodingDesc_check" scheme="schematron">
               <constraint>
@@ -1169,14 +1179,52 @@ Custom:Entry#2
             <!-- control content of catDesc of SegmOnto -->
             <constraintSpec ident="catDesc_check" scheme="schematron">
               <constraint>
+                <!-- CustomZone -->
                 <sch:rule context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][1]">
+                  <sch:assert test="@xml:id='CustomZone'"
+                    >Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "CustomZone".</sch:assert>
+                  <sch:assert test="./tei:title/text()='CustomZone'"
+                    >Element "category" with attribute "@xml:id" and value "CustomZone" incomplete ; missing required element "title" with content "CustomZone".</sch:assert>
+                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/CustomZone/CustomZone.md'"
+                    >Element "category" with attribute "@xml:id" and value "CustomZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/CustomZone/CustomZone.md".</sch:assert>
+                </sch:rule>
+                <!-- DamageZone -->
+                <sch:rule context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][2]">
                   <sch:assert test="@xml:id='DamageZone'"
-                    >Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "Damage".</sch:assert>
+                    >Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "DamageZone".</sch:assert>
                   <sch:assert test="./tei:title/text()='DamageZone'"
                     >Element "category" with attribute "@xml:id" and value "DamageZone" incomplete ; missing required element "title" with content "DamageZone".</sch:assert>
                   <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/DamageZone/DamageZone.md'"
-                    >Element "category" with attribute "@xml:id" and value "DamageZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/Damage/Damage.md".</sch:assert>
+                    >Element "category" with attribute "@xml:id" and value "DamageZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/DamageZone/DamageZone.md".</sch:assert>
                 </sch:rule>
+                <!-- DigitizationArtefactZone -->
+                <sch:rule context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][3]">
+                  <sch:assert test="@xml:id='DigitizationArtefactZone'"
+                    >Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "DropCapitalZone".</sch:assert>
+                  <sch:assert test="./tei:title/text()='DigitizationArtefactZone'"
+                    >Element "category" with attribute "@xml:id" and value "DigitizationArtefactZone" incomplete ; missing required element "title" with content "DigitizationArtefactZone".</sch:assert>
+                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/DigitizationArtefactZone/DigitizationArtefactZone.md'"
+                    >Element "category" with attribute "@xml:id" and value "DigitizationArtefactZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/DigitizationArtefactZone/DigitizationArtefactZone.md".</sch:assert>
+                </sch:rule>
+                <!-- DropCapitalZone -->
+                <sch:rule context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][4]">
+                  <sch:assert test="@xml:id='DropCapitalZone'"
+                    >Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "DropCapitalZone".</sch:assert>
+                  <sch:assert test="./tei:title/text()='DropCapitalZone'"
+                    >Element "category" with attribute "@xml:id" and value "DropCapitalZone" incomplete ; missing required element "title" with content "DropCapitalZone".</sch:assert>
+                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/DropCapitalZone/DropCapitalZone.md'"
+                    >Element "category" with attribute "@xml:id" and value "DropCapitalZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/DropCapitalZone/DropCapitalZone.md".</sch:assert>
+                </sch:rule>
+                <!-- GraphicZone -->
+                <sch:rule context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][5]">
+                  <sch:assert test="@xml:id='GraphicZone'"
+                    >Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "GraphicZone".</sch:assert>
+                  <sch:assert test="./tei:title/text()='GraphicZone'"
+                    >Element "category" with attribute "@xml:id" and value "GraphicZone" incomplete ; missing required element "title" with content "GraphicZone".</sch:assert>
+                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/GraphicZone/GraphicZone.md'"
+                    >Element "category" with attribute "@xml:id" and value "GraphicZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/GraphicZone/GraphicZone.md".</sch:assert>
+                </sch:rule>
+                <!-- DefaultLine -->
                 <sch:rule context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoLines'][1]">
                   <sch:assert test="@xml:id='DefaultLine'"
                     >Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "Default".</sch:assert>
@@ -1206,10 +1254,32 @@ Custom:Entry#2
           </elementSpec>
           
           <elementSpec ident="surface" mode="change">
+            <!-- If a surface, it requires the graphic element in it -->
+            <constraintSpec ident="line_path_check" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:surface[parent::tei:sourceDoc]">
+                  <sch:assert test="./tei:graphic"
+                    >Element "surface" incomplete; missing element 'graphic'.</sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
             <attList>
               <attDef ident="xml:id" mode="change" usage="req"/>
               <attDef ident="type" mode="change" usage="req"/>
-              <attDef ident="source" mode="change" usage="req"/>
+              <!-- @cert allows to tag pages that have been corrected -->
+              <attDef ident="cert" mode="change" usage="rec">
+                <valList type="closed" mode="change">
+                  <valItem ident="gold">
+                    <desc>Gold standard, corrected by a researcher</desc>
+                  </valItem>
+                  <valItem ident="silver">
+                    <desc>Silver standard, produced automatically</desc>
+                  </valItem>
+                  <valItem ident="other">
+                    <desc>Other standard</desc>
+                  </valItem>
+                </valList>
+              </attDef>
             </attList>
           </elementSpec>
           
@@ -1219,7 +1289,7 @@ Custom:Entry#2
               <constraint>
                 <sch:rule context="tei:zone[parent::tei:zone]">
                   <sch:assert test="./tei:path and ./tei:line"
-                    >A line zone must contains the element 'path' and 'line'.</sch:assert>
+                    >Element "zone" incomplete; missing element 'path' and 'line'.</sch:assert>
                 </sch:rule>
               </constraint>
             </constraintSpec>
@@ -1233,31 +1303,12 @@ Custom:Entry#2
           </elementSpec>
           
           <elementSpec ident="path" mode="change">
-            <!-- Getting rid of this f%&*ing rule -->
-            <constraintSpec ident="pathmustnotbeclosed" scheme="schematron" mode="change"/>
             <attList>
               <attDef ident="xml:id" mode="change" usage="req"/>
               <attDef ident="type" mode="change" usage="req"/>
-              <attDef ident="points" mode="change" usage="req">
-                <!-- because of the schematron rule mentioned supra, we need to redefine 
-                the datatype here.-->
-                <datatype>
-                  <dataRef name="token" restriction="([0-9]+\s?)*"/>
-                </datatype>
-              </attDef>
+              <attDef ident="points" mode="change" usage="req"/>
             </attList>
-          </elementSpec>
-          
-          <classSpec ident="att.coordinated" type="atts" mode="change">
-            <attList>
-              <attDef ident="points" mode="change">
-                <datatype>
-                  <dataRef name="token" restriction="([0-9]+\s?)*"/>
-                </datatype>
-              </attDef>
-            </attList>
-          </classSpec>
-          
+          </elementSpec>          
         </schemaSpec>
         
       </div>

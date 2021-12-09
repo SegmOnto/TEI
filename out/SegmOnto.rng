@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-11-24T08:23:33Z. .
+Schema generated from ODD source 2021-12-06T18:22:45Z. .
 TEI Edition: Version 4.3.0. Last updated on
         31st August 2021, revision b4f72b1ff
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.3.0/
@@ -7122,9 +7122,57 @@ Sample values include: 1] book; 2] chapter; 3] entry; 4] poem; 5] letter; 6] lin
                       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                       xmlns:foaf="http://xmlns.com/foaf/0.1/"
                       context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][1]">
-                  <sch:assert test="@xml:id='DamageZone'">Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "Damage".</sch:assert>
+                  <sch:assert test="@xml:id='CustomZone'">Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "CustomZone".</sch:assert>
+                  <sch:assert test="./tei:title/text()='CustomZone'">Element "category" with attribute "@xml:id" and value "CustomZone" incomplete ; missing required element "title" with content "CustomZone".</sch:assert>
+                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/CustomZone/CustomZone.md'">Element "category" with attribute "@xml:id" and value "CustomZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/CustomZone/CustomZone.md".</sch:assert>
+                </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+                      context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][2]">
+                  <sch:assert test="@xml:id='DamageZone'">Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "DamageZone".</sch:assert>
                   <sch:assert test="./tei:title/text()='DamageZone'">Element "category" with attribute "@xml:id" and value "DamageZone" incomplete ; missing required element "title" with content "DamageZone".</sch:assert>
-                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/DamageZone/DamageZone.md'">Element "category" with attribute "@xml:id" and value "DamageZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/Damage/Damage.md".</sch:assert>
+                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/DamageZone/DamageZone.md'">Element "category" with attribute "@xml:id" and value "DamageZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/DamageZone/DamageZone.md".</sch:assert>
+                </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+                      context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][3]">
+                  <sch:assert test="@xml:id='DigitizationArtefactZone'">Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "DropCapitalZone".</sch:assert>
+                  <sch:assert test="./tei:title/text()='DigitizationArtefactZone'">Element "category" with attribute "@xml:id" and value "DigitizationArtefactZone" incomplete ; missing required element "title" with content "DigitizationArtefactZone".</sch:assert>
+                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/DigitizationArtefactZone/DigitizationArtefactZone.md'">Element "category" with attribute "@xml:id" and value "DigitizationArtefactZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/DigitizationArtefactZone/DigitizationArtefactZone.md".</sch:assert>
+                </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+                      context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][4]">
+                  <sch:assert test="@xml:id='DropCapitalZone'">Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "DropCapitalZone".</sch:assert>
+                  <sch:assert test="./tei:title/text()='DropCapitalZone'">Element "category" with attribute "@xml:id" and value "DropCapitalZone" incomplete ; missing required element "title" with content "DropCapitalZone".</sch:assert>
+                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/DropCapitalZone/DropCapitalZone.md'">Element "category" with attribute "@xml:id" and value "DropCapitalZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/DropCapitalZone/DropCapitalZone.md".</sch:assert>
+                </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+                      context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][5]">
+                  <sch:assert test="@xml:id='GraphicZone'">Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "GraphicZone".</sch:assert>
+                  <sch:assert test="./tei:title/text()='GraphicZone'">Element "category" with attribute "@xml:id" and value "GraphicZone" incomplete ; missing required element "title" with content "GraphicZone".</sch:assert>
+                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/GraphicZone/GraphicZone.md'">Element "category" with attribute "@xml:id" and value "GraphicZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/GraphicZone/GraphicZone.md".</sch:assert>
                 </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -7639,7 +7687,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-TEI-sourceDoc_check-constraint-rule-27">
+                  id="segmonto-TEI-sourceDoc_check-constraint-rule-31">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:s="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -9406,9 +9454,22 @@ Suggested values include: 1] label; 2] data</a:documentation>
       <optional>
          <attribute name="points">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies a two dimensional area by means of a series of pairs of numbers, each of which gives the x,y coordinates of a point on a line enclosing the area.</a:documentation>
-            <data type="token">
-               <param name="pattern">([0-9]+\s?)*</param>
-            </data>
+            <list>
+               <data type="token">
+                  <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+               </data>
+               <data type="token">
+                  <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+               </data>
+               <data type="token">
+                  <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+               </data>
+               <zeroOrMore>
+                  <data type="token">
+                     <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+                  </data>
+               </zeroOrMore>
+            </list>
          </attribute>
       </optional>
    </define>
@@ -9447,7 +9508,7 @@ Suggested values include: 1] label; 2] data</a:documentation>
             </choice>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-sourceDoc-id_check-constraint-rule-28">
+                  id="segmonto-sourceDoc-id_check-constraint-rule-32">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:s="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -9514,6 +9575,19 @@ Suggested values include: 1] label; 2] data</a:documentation>
                </group>
             </zeroOrMore>
          </group>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="segmonto-surface-line_path_check-constraint-rule-33">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+                      context="tei:surface[parent::tei:sourceDoc]">
+                  <sch:assert test="./tei:graphic">Element "surface" incomplete; missing element 'graphic'.</sch:assert>
+                </sch:rule>
+         </pattern>
          <ref name="tei_att.global.attribute.n"/>
          <ref name="tei_att.global.attribute.xmllang"/>
          <ref name="tei_att.global.attribute.xmlbase"/>
@@ -9532,8 +9606,8 @@ Suggested values include: 1] label; 2] data</a:documentation>
          <ref name="tei_att.global.analytic.attribute.ana"/>
          <ref name="tei_att.global.facs.attribute.facs"/>
          <ref name="tei_att.global.change.attribute.change"/>
-         <ref name="tei_att.global.responsibility.attribute.cert"/>
          <ref name="tei_att.global.responsibility.attribute.resp"/>
+         <ref name="tei_att.global.source.attribute.source"/>
          <ref name="tei_att.coordinated.attributes"/>
          <ref name="tei_att.declaring.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
@@ -9541,14 +9615,19 @@ Suggested values include: 1] label; 2] data</a:documentation>
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
             <data type="ID"/>
          </attribute>
-         <attribute name="source">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the source from which some aspect of this element is drawn.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
-         </attribute>
+         <optional>
+            <attribute name="cert">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(certainty) signifies the degree of certainty associated with the intervention or interpretation.</a:documentation>
+               <choice>
+                  <value>gold</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gold standard, corrected by a researcher</a:documentation>
+                  <value>silver</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Silver standard, produced automatically</a:documentation>
+                  <value>other</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Other standard</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
             <data type="token">
@@ -9603,7 +9682,7 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-zone-line_path_check-constraint-rule-29">
+                  id="segmonto-zone-line_path_check-constraint-rule-34">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:s="http://purl.oclc.org/dsdl/schematron"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -9612,7 +9691,7 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
                       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                       xmlns:foaf="http://xmlns.com/foaf/0.1/"
                       context="tei:zone[parent::tei:zone]">
-                  <sch:assert test="./tei:path and ./tei:line">A line zone must contains the element 'path' and 'line'.</sch:assert>
+                  <sch:assert test="./tei:path and ./tei:line">Element "zone" incomplete; missing element 'path' and 'line'.</sch:assert>
                 </sch:rule>
          </pattern>
          <ref name="tei_att.global.attribute.n"/>
@@ -9670,9 +9749,22 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
          </attribute>
          <attribute name="points">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies a two dimensional area by means of a series of pairs of numbers, each of which gives the x,y coordinates of a point on a line enclosing the area.</a:documentation>
-            <data type="token">
-               <param name="pattern">([0-9]+\s?)*</param>
-            </data>
+            <list>
+               <data type="token">
+                  <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+               </data>
+               <data type="token">
+                  <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+               </data>
+               <data type="token">
+                  <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+               </data>
+               <zeroOrMore>
+                  <data type="token">
+                     <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+                  </data>
+               </zeroOrMore>
+            </list>
          </attribute>
          <optional>
             <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
@@ -9689,6 +9781,29 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
       <element name="path">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(path) defines any line passing through two or more points within a <code xmlns="http://www.w3.org/1999/xhtml">&lt;surface&gt;</code> element. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]</a:documentation>
          <empty/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="segmonto-path-pathmustnotbeclosed-constraint-rule-35">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+                      context="tei:path[@points]">
+        
+               <sch:let name="firstPair" value="tokenize( normalize-space( @points ), ' ')[1]"/>
+               <sch:let name="lastPair"
+                        value="tokenize( normalize-space( @points ), ' ')[last()]"/>
+               <sch:let name="firstX" value="xs:float( substring-before( $firstPair, ',') )"/>
+               <sch:let name="firstY" value="xs:float( substring-after( $firstPair, ',') )"/>
+               <sch:let name="lastX" value="xs:float( substring-before( $lastPair, ',') )"/>
+               <sch:let name="lastY" value="xs:float( substring-after( $lastPair, ',') )"/>
+               <sch:report test="$firstX eq $lastX  and  $firstY eq $lastY">The first and
+          last elements of this path are the same. To specify a closed polygon, use
+          the zone element rather than the path element. </sch:report>
+            </sch:rule>
+         </pattern>
          <ref name="tei_att.global.attribute.n"/>
          <ref name="tei_att.global.attribute.xmllang"/>
          <ref name="tei_att.global.attribute.xmlbase"/>
@@ -9723,9 +9838,19 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
          </attribute>
          <attribute name="points">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies a line within the container or bounding box specified by the parent element by means of a series of two or more pairs of numbers, each of which gives the x,y coordinates of a point on the line.</a:documentation>
-            <data type="token">
-               <param name="pattern">([0-9]+\s?)*</param>
-            </data>
+            <list>
+               <data type="token">
+                  <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+               </data>
+               <data type="token">
+                  <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+               </data>
+               <zeroOrMore>
+                  <data type="token">
+                     <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+                  </data>
+               </zeroOrMore>
+            </list>
          </attribute>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
@@ -9741,7 +9866,7 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(added span of text) marks the beginning of a longer sequence of text added by an author, scribe, annotator or corrector (see also <code xmlns="http://www.w3.org/1999/xhtml">&lt;add&gt;</code>). [11.3.1.4. Additions and Deletions]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-addSpan-spanTo-constraint-assert-36">
+                  id="segmonto-addSpan-spanTo-constraint-assert-49">
             <rule context="tei:addSpan">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -9754,7 +9879,7 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-addSpan-spanTo_fr-constraint-assert-37">
+                  id="segmonto-addSpan-spanTo_fr-constraint-assert-50">
             <rule context="tei:addSpan">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -9790,7 +9915,7 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(damaged span of text) marks the beginning of a longer sequence of text which is damaged in some way but still legible. [11.3.3.1. Damage, Illegibility, and Supplied Text]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-damageSpan-spanTo-constraint-assert-38">
+                  id="segmonto-damageSpan-spanTo-constraint-assert-51">
             <rule context="tei:damageSpan">
                <assert xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -9803,7 +9928,7 @@ The @spanTo attribute of <name/> is required.</assert>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-damageSpan-spanTo_fr-constraint-assert-39">
+                  id="segmonto-damageSpan-spanTo_fr-constraint-assert-52">
             <rule context="tei:damageSpan">
                <assert xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -9826,7 +9951,7 @@ The @spanTo attribute of <name/> is required.</assert>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(deleted span of text) marks the beginning of a longer sequence of text deleted, marked as deleted, or otherwise signaled as superfluous or spurious by an author, scribe, annotator, or corrector. [11.3.1.4. Additions and Deletions]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-delSpan-spanTo-constraint-assert-40">
+                  id="segmonto-delSpan-spanTo-constraint-assert-53">
             <rule context="tei:delSpan">
                <assert xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -9838,7 +9963,7 @@ The @spanTo attribute of <name/> is required.</assert>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-delSpan-spanTo_fr-constraint-assert-41">
+                  id="segmonto-delSpan-spanTo_fr-constraint-assert-54">
             <rule context="tei:delSpan">
                <assert xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -10007,7 +10132,7 @@ Sample values include: 1] header; 2] footer; 3] pageNum (page number); 4] lineNu
             </choice>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-subst-substContents1-constraint-assert-42">
+                  id="segmonto-subst-substContents1-constraint-assert-55">
             <rule context="tei:subst">
                <assert xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -11681,7 +11806,7 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
             <ref name="tei_desc"/>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-relation-reforkeyorname-constraint-assert-43">
+                  id="segmonto-relation-reforkeyorname-constraint-assert-56">
             <rule context="tei:relation">
                <assert xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -11693,7 +11818,7 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-relation-activemutual-constraint-report-16">
+                  id="segmonto-relation-activemutual-constraint-report-17">
             <rule context="tei:relation">
                <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -11705,7 +11830,7 @@ Sample values include: 1] e (e); 2] he (he); 3] she (she); 4] they (they)</a:doc
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-relation-activepassive-constraint-report-17">
+                  id="segmonto-relation-activepassive-constraint-report-18">
             <rule context="tei:relation">
                <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -12099,7 +12224,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-objectIdentifier-objectIdentifier_minimal-constraint-report-18">
+                  id="segmonto-objectIdentifier-objectIdentifier_minimal-constraint-report-19">
             <rule context="tei:objectIdentifier">
                <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -12281,7 +12406,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(catchwords) describes the system used to ensure correct ordering of the quires or similar making up a codex, incunable, or other object typically by means of annotations at the foot of the page. [10.3.7. Catchwords, Signatures, Secundo Folio]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-catchwords-catchword_in_msDesc-constraint-assert-44">
+                  id="segmonto-catchwords-catchword_in_msDesc-constraint-assert-57">
             <rule context="tei:catchwords">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -12307,7 +12432,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-dimensions-duplicateDim-constraint-report-19">
+                  id="segmonto-dimensions-duplicateDim-constraint-report-20">
             <rule context="tei:dimensions">
                <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -12527,7 +12652,7 @@ Sample values include: 1] binding; 2] endband; 3] slipcase; 4] support; 5] tie</
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(second folio) marks the word or words taken from a fixed point in a codex (typically the beginning of the second leaf) in order to provide a unique identifier for it.  [10.3.7. Catchwords, Signatures, Secundo Folio]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-secFol-secFol_in_msDesc-constraint-assert-45">
+                  id="segmonto-secFol-secFol_in_msDesc-constraint-assert-58">
             <rule context="tei:secFol">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -12548,7 +12673,7 @@ Sample values include: 1] binding; 2] endband; 3] slipcase; 4] support; 5] tie</
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(signatures) contains discussion of the leaf or quire signatures found within a codex or similar object. [10.3.7. Catchwords, Signatures, Secundo Folio]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-signatures-signatures_in_msDesc-constraint-assert-46">
+                  id="segmonto-signatures-signatures_in_msDesc-constraint-assert-59">
             <rule context="tei:signatures">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -12608,28 +12733,19 @@ Sample values include: 1] binding; 2] endband; 3] slipcase; 4] support; 5] tie</
                <optional>
                   <ref name="tei_geogName"/>
                </optional>
-        
                <optional>
                   <ref name="tei_institution"/>
                </optional>
-        
-        
                <optional>
                   <ref name="tei_repository"/>
                </optional>
-        
-        
                <zeroOrMore>
                   <ref name="tei_collection"/>
                </zeroOrMore>
-        
-        
                <zeroOrMore>
                   <ref name="tei_idno"/>
                </zeroOrMore>
-        
             </group>
-      
             <zeroOrMore>
                <choice>
                   <ref name="tei_msName"/>
@@ -12637,10 +12753,22 @@ Sample values include: 1] binding; 2] endband; 3] slipcase; 4] support; 5] tie</
                   <ref name="tei_altIdentifier"/>
                </choice>
             </zeroOrMore>
-      
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-msIdentifier-msId_minimal-constraint-report-22">
+                  id="segmonto-msIdentifier-repository_check-constraint-rule-36">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+                      context="tei:msIdentifier[parent::tei:msDesc]">
+                  <sch:assert test="./tei:repository">Element "msIdentifier" incomplete; missing required element "repository".</sch:assert>
+                </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="segmonto-msIdentifier-msId_minimal-constraint-report-23">
             <rule context="tei:msIdentifier">
                <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -13864,7 +13992,7 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(link) defines an association or hypertextual link among elements or passages, of some type not more precisely specifiable by other elements. [16.1. Links]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-link-linkTargets3-constraint-assert-47">
+                  id="segmonto-link-linkTargets3-constraint-assert-61">
             <rule context="tei:link">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -13907,7 +14035,7 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(anonymous block) contains any arbitrary component-level unit of text, acting as an anonymous container for phrase or inter level elements analogous to, but without the semantic baggage of, a paragraph. [16.3. Blocks, Segments, and Anchors]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-ab-abstractModel-structure-ab-constraint-report-23">
+                  id="segmonto-ab-abstractModel-structure-ab-constraint-report-24">
             <rule context="tei:ab">
                <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -13921,7 +14049,7 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-ab-abstractModel-structure-l-constraint-report-24">
+                  id="segmonto-ab-abstractModel-structure-l-constraint-report-25">
             <rule context="tei:ab">
                <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -14092,7 +14220,7 @@ Suggested values include: 1] d (days); 2] h (hours); 3] min (minutes); 4] s (sec
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-join-joinTargets3-constraint-assert-48">
+                  id="segmonto-join-joinTargets3-constraint-assert-62">
             <rule context="tei:join">
                <assert xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -14244,7 +14372,7 @@ You must supply at least two values for @target on <name/>
             <ref name="tei_model.standOffPart"/>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-standOff-nested_standOff_should_be_typed-constraint-assert-49">
+                  id="segmonto-standOff-nested_standOff_should_be_typed-constraint-assert-63">
             <rule context="tei:standOff">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:s="http://purl.oclc.org/dsdl/schematron"
@@ -14483,7 +14611,7 @@ You must supply at least two values for @target on <name/>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(s-unit) contains a sentence-like division of a text. [17.1. Linguistic Segment Categories 8.4.1. Segmentation]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-s-noNestedS-constraint-report-25">
+                  id="segmonto-s-noNestedS-constraint-report-26">
             <rule context="tei:s">
                <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -14640,7 +14768,7 @@ You must supply at least two values for @target on <name/>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">associates an interpretative annotation directly with a span of text. [17.3. Spans and Interpretations]</a:documentation>
          <ref name="tei_macro.phraseSeq.limited"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-span-targetfrom-constraint-report-26">
+                  id="segmonto-span-targetfrom-constraint-report-27">
             <rule context="tei:span">
                <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -14654,7 +14782,7 @@ Only one of the attributes @target and @from may be supplied on <name/>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-span-targetto-constraint-report-27">
+                  id="segmonto-span-targetto-constraint-report-28">
             <rule context="tei:span">
                <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -14668,7 +14796,7 @@ Only one of the attributes @target and @to may be supplied on <name/>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-span-tonotfrom-constraint-report-28">
+                  id="segmonto-span-tonotfrom-constraint-report-29">
             <rule context="tei:span">
                <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -14681,7 +14809,7 @@ If @to is supplied on <name/>, @from must be supplied as well</report>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="segmonto-span-tofrom-constraint-report-29">
+                  id="segmonto-span-tofrom-constraint-report-30">
             <rule context="tei:span">
                <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"

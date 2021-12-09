@@ -95,9 +95,25 @@
                   <ptr target="https://github.com/segmonto"/>
                </bibl>
                <category xml:id="SegmOntoZones">
+                  <catDesc xml:id="CustomZone">
+                     <title>CustomZone</title>
+                     <ptr target="https://github.com/SegmOnto/examples/blob/main/zones/CustomZone/CustomZone.md"/>
+                  </catDesc>
                   <catDesc xml:id="DamageZone">
                      <title>DamageZone</title>
                      <ptr target="https://github.com/SegmOnto/examples/blob/main/zones/DamageZone/DamageZone.md"/>
+                  </catDesc>
+                  <catDesc xml:id="DigitizationArtefactZone">
+                     <title>DigitizationArtefactZone</title>
+                     <ptr target="https://github.com/SegmOnto/examples/blob/main/zones/DigitizationArtefactZone/DigitizationArtefactZone.md"/>
+                  </catDesc>
+                  <catDesc xml:id="DropCapitalZone">
+                     <title>DropCapitalZone</title>
+                     <ptr target="https://github.com/SegmOnto/examples/blob/main/zones/DropCapitalZone/DropCapitalZone.md"/>
+                  </catDesc>
+                  <catDesc xml:id="GraphicZone">
+                     <title>GraphicZone</title>
+                     <ptr target="https://github.com/SegmOnto/examples/blob/main/zones/GraphicZone/GraphicZone.md"/>
                   </catDesc>
                </category>
                <category xml:id="SegmOntoLines">
@@ -109,7 +125,6 @@
             </taxonomy>
          </classDecl>
          <!-- Important to describe the gold GT -->
-         <!-- How to point to the pages that have been corrected only? -->
          <editorialDecl corresp="#automaticTranscription">
             <!-- Add @status with closed values, for instance taken from Stutzmann classifiction of
                transcriptions?  -->
@@ -134,9 +149,6 @@
             <quotation>
                <p></p>
             </quotation>
-            <correction>
-               <p></p>
-            </correction>
          </editorialDecl>
       </encodingDesc>
       <!--Mandatory for the GT -->
@@ -155,7 +167,8 @@
       <!-- Page -->
       <surface xml:id="p1"
                   type="page"
-                  source="uri">
+                   cert="gold">
+         <graphic url="url"/>
          <!-- Zone -->
          <!-- @xml:id are important for the conversion to RDF. It is made of:
             p+page number
@@ -176,19 +189,19 @@
                   corresp="#segmOntoZone"
                   ana="#segmOntoZone:subtype"
                   n="1"
-                  points="1 2 3 4 5 6"
+                  points="1,2 3,4 5,6"
                   source="uri">
             <!-- Mask of the line -->
             <zone xml:id="p1z1l1"
                   corresp="#segmOntoLine"
                   ana="#segmOntoLine:subtype"
                   n="1"
-                  points="1 2 3 4 5 6"
+                  points="1,2 3,4 5,6"
                   source="uri">
                <!-- baseline -->
                <path xml:id="p1z1l1b"
                   type="baseline"
-                  points="1 2 3 4 5 6"/>
+                  points="1,2 3,4 5,6"/>
                <!-- transcription -->
                <line xml:id="p1z1l1t">Some text</line>
             </zone>
@@ -197,29 +210,29 @@
             corresp="#segmOntoZone"
             ana="#segmOntoZone:subtype"
             n="1"
-            points="1 2 3 4 5 6"
+            points="1,2 3,4 5,6"
             source="uri">
             <zone xml:id="p1z2l2"
                corresp="#segmOntoLine"
                ana="#segmOntoLine:subtype"
                n="1"
-               points="1 2 3 4 5 6"
+               points="1,2 3,4 5,6"
                source="uri">
                <path xml:id="p1z2l1"
                   type="baseline"
-                  points="1 2 3 4 5 6"/>
+                  points="1,2 3,4 5,6"/>
                <line xml:id="p1b2l1">Some text</line>
             </zone>
          </zone>
       </surface>
       <surface xml:id="p2"
-         type="#segmOntoZone"
-         source="uri">
+               type="page">
+         <graphic url="url"/>
          <!-- decoration without baseline -->
          <zone cert="high" xml:id="p2z1"
             corresp="#segmOntoZone"
             ana="#segmOntoLine:subtype"
-            points="1 2 3 4 5 6"
+            points="1,2 3,4 5,6"
             source="uri">
          </zone>
       </surface>

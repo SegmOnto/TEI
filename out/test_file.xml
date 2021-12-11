@@ -48,7 +48,7 @@
             </availability>
             <date when="2020-11-10"/>
          </publicationStmt>
-         <!-- seriesStmt is recommended, if massive digitisation -->
+         <!-- seriesStmt is recommended, in cas of massive digitisation -->
          <seriesStmt>
             <title>Description of the series</title>
          </seriesStmt>
@@ -67,6 +67,7 @@
                <msIdentifier>
                   <country>Country</country>
                   <settlement>City</settlement>
+                  <!-- these two last elements are mandatory -->
                   <repository>Library/archive</repository>
                   <idno>Shelfmark</idno>
                </msIdentifier>
@@ -87,7 +88,6 @@
             </application>
          </appInfo>
          <!-- classDecl is mandatory, becuse we need to point to SegmOnto's definitions -->
-         <!-- We need to add subtypes -->
          <classDecl>
             <taxonomy xml:id="SegmOnto">
                <bibl>
@@ -149,9 +149,8 @@
             b pour baseline
             t pour transcription
             -->
-         <!-- @type points to a SegmOnto zone type, with a definition in SegmOnto's guidelines
-               online, whose address is referenced in Taxonomy. It has a closed list of values. It
-               is mandatory-->
+         <!-- @type points to a SegmOnto zone type. It
+               is mandatory with closed values-->
          <!-- @subtype points to a SegmOnto subtype, defined in the teiHeader, in taxonomy.
               It has an open list of values. It is not mandatory -->
          <!-- @n is the numbering of zones or lines. It is not mandatory -->

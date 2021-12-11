@@ -1046,6 +1046,16 @@ Custom:Entry#2
             </constraintSpec>   
           </elementSpec>
           
+          <elementSpec ident="profileDesc" mode="change">
+            <constraintSpec ident="langUsage_check" scheme="schematron">
+              <constraint>
+                <sch:rule context="tei:profileDesc[parent::tei:teiHeader]">
+                  <sch:assert test="./tei:langUsage">Element "profileDesc" incomplete; missing required element "langUsage".</sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>   
+          </elementSpec>
+          
           <elementSpec ident="authority" mode="change">
             <attList>
               <!-- Not valid against TEI all, but implemented in TEI lex-0 -->
@@ -1105,6 +1115,7 @@ Custom:Entry#2
                 </sch:rule>
                 <sch:rule context="tei:bibl[parent::tei:taxonomy/@xml:id='SegmOnto']">
                   <sch:assert test="./tei:title/text()='SegmOnto'">Element "classDecl" incomplete; missing required element "bibl" containing element "title" with content "SegmOnto".</sch:assert>
+                  <sch:assert test="./tei:edition/@n">Element "classDecl" incomplete; missing required element "bibl" containing element "edition" with attribute "@n".</sch:assert>
                   <sch:assert test="./tei:ptr/@target='https://github.com/segmonto'">Element "classDecl" incomplete; missing required element "bibl" containing element "ptr" with attribute "@target" and value "https://github.com/segmonto".</sch:assert>
                 </sch:rule>
               </constraint>
@@ -1120,121 +1131,16 @@ Custom:Entry#2
             </constraintSpec>
           </elementSpec>
           
-          <elementSpec ident="editorialDecl" mode="change">
-            <!-- Required for the GT -->
-            <content>
-              <sequence preserveOrder="true">
-                <elementRef key="correction"/>
-                <elementRef key="hyphenation"/>
-                <elementRef key="interpretation"/>
-                <elementRef key="normalization"/>
-                <elementRef key="punctuation"/>
-                <elementRef key="segmentation"/>
-                <elementRef key="quotation"/>
-              </sequence>
-            </content>
-            <constraintSpec ident="corresp_check" scheme="schematron">
-              <constraint>
-                <sch:rule context="tei:editorialDecl[parent::tei:encodingDesc]">
-                  <sch:assert test="@corresp='#automaticTranscription'"
-                    >Element "editorialDecl" incomplete; missing attribute "@corresp" and value "#automaticTranscription".</sch:assert>
-                </sch:rule>
-              </constraint>
-            </constraintSpec>
-            <attList>
-              <attDef ident="corresp" mode="change" usage="req">
-              </attDef>
-            </attList>
-          </elementSpec>
-          
-          <elementSpec ident="taxonomy" mode="change">
-            <!-- control content of taxonomy of SegmOnto -->
-            <constraintSpec ident="category_check" scheme="schematron">
-              <constraint>
-                <sch:rule context="tei:category[parent::tei:taxonomy/@xml:id='SegmOnto'][1]">
-                  <sch:assert test="@xml:id='SegmOntoZones'"
-                    >Element "taxonomy" incomplete; missing required element "category" with attribute "@xml:id" and value "SegmOntoZones".</sch:assert>
-                </sch:rule>
-                <sch:rule context="tei:category[parent::tei:taxonomy/@xml:id='SegmOnto'][2]">
-                  <sch:assert test="@xml:id='SegmOntoLines'"
-                    >Element "taxonomy" incomplete; missing required element "category" with attribute "@xml:id" and value "SegmOntoLines".</sch:assert>
-                </sch:rule>
-              </constraint>
-            </constraintSpec>
-          </elementSpec>
-          
           <elementSpec ident="application" mode="change">
             <attList>
               <attDef ident="id" mode="change">
-                <valList type="semi">
+                <valList type="semi" mode="change">
                   <valItem ident="eScriptorium"/>
                   <valItem ident="Transkribus"/>
                   <valItem ident="OCR4all"/>
                 </valList>
               </attDef>
             </attList>
-          </elementSpec>
-          
-          <elementSpec ident="category" mode="change">
-            <!-- control content of catDesc of SegmOnto -->
-            <constraintSpec ident="catDesc_check" scheme="schematron">
-              <constraint>
-                <!-- CustomZone -->
-                <sch:rule context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][1]">
-                  <sch:assert test="@xml:id='CustomZone'"
-                    >Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "CustomZone".</sch:assert>
-                  <sch:assert test="./tei:title/text()='CustomZone'"
-                    >Element "category" with attribute "@xml:id" and value "CustomZone" incomplete ; missing required element "title" with content "CustomZone".</sch:assert>
-                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/CustomZone/CustomZone.md'"
-                    >Element "category" with attribute "@xml:id" and value "CustomZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/CustomZone/CustomZone.md".</sch:assert>
-                </sch:rule>
-                <!-- DamageZone -->
-                <sch:rule context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][2]">
-                  <sch:assert test="@xml:id='DamageZone'"
-                    >Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "DamageZone".</sch:assert>
-                  <sch:assert test="./tei:title/text()='DamageZone'"
-                    >Element "category" with attribute "@xml:id" and value "DamageZone" incomplete ; missing required element "title" with content "DamageZone".</sch:assert>
-                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/DamageZone/DamageZone.md'"
-                    >Element "category" with attribute "@xml:id" and value "DamageZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/DamageZone/DamageZone.md".</sch:assert>
-                </sch:rule>
-                <!-- DigitizationArtefactZone -->
-                <sch:rule context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][3]">
-                  <sch:assert test="@xml:id='DigitizationArtefactZone'"
-                    >Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "DropCapitalZone".</sch:assert>
-                  <sch:assert test="./tei:title/text()='DigitizationArtefactZone'"
-                    >Element "category" with attribute "@xml:id" and value "DigitizationArtefactZone" incomplete ; missing required element "title" with content "DigitizationArtefactZone".</sch:assert>
-                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/DigitizationArtefactZone/DigitizationArtefactZone.md'"
-                    >Element "category" with attribute "@xml:id" and value "DigitizationArtefactZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/DigitizationArtefactZone/DigitizationArtefactZone.md".</sch:assert>
-                </sch:rule>
-                <!-- DropCapitalZone -->
-                <sch:rule context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][4]">
-                  <sch:assert test="@xml:id='DropCapitalZone'"
-                    >Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "DropCapitalZone".</sch:assert>
-                  <sch:assert test="./tei:title/text()='DropCapitalZone'"
-                    >Element "category" with attribute "@xml:id" and value "DropCapitalZone" incomplete ; missing required element "title" with content "DropCapitalZone".</sch:assert>
-                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/DropCapitalZone/DropCapitalZone.md'"
-                    >Element "category" with attribute "@xml:id" and value "DropCapitalZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/DropCapitalZone/DropCapitalZone.md".</sch:assert>
-                </sch:rule>
-                <!-- GraphicZone -->
-                <sch:rule context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoZones'][5]">
-                  <sch:assert test="@xml:id='GraphicZone'"
-                    >Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "GraphicZone".</sch:assert>
-                  <sch:assert test="./tei:title/text()='GraphicZone'"
-                    >Element "category" with attribute "@xml:id" and value "GraphicZone" incomplete ; missing required element "title" with content "GraphicZone".</sch:assert>
-                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/zones/GraphicZone/GraphicZone.md'"
-                    >Element "category" with attribute "@xml:id" and value "GraphicZone" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/zones/GraphicZone/GraphicZone.md".</sch:assert>
-                </sch:rule>
-                <!-- DefaultLine -->
-                <sch:rule context="tei:catDesc[parent::tei:category/@xml:id='SegmOntoLines'][1]">
-                  <sch:assert test="@xml:id='DefaultLine'"
-                    >Element "category" incomplete; missing required element "catDesc" with attribute "@xml:id" and value "Default".</sch:assert>
-                  <sch:assert test="./tei:title/text()='DefaultLine'"
-                    >Element "category" with attribute "@xml:id" and value "DefaultLine" incomplete; missing required element "title" with content "DefaultLine".</sch:assert>
-                  <sch:assert test="./tei:ptr/@target='https://github.com/SegmOnto/examples/blob/main/lines/DefaultLine/DefaultLine.md'"
-                    >Element "category" with attribute "@xml:id" and value "DefaultLine" incomplete; missing required element "ptr" with attribute "@target" and value "https://github.com/SegmOnto/examples/blob/main/lines/Default/Default.md".</sch:assert>
-                </sch:rule>
-              </constraint>
-            </constraintSpec>
           </elementSpec>
           
           <!-- SourceDoc -->
@@ -1265,7 +1171,6 @@ Custom:Entry#2
             </constraintSpec>
             <attList>
               <attDef ident="xml:id" mode="change" usage="req"/>
-              <attDef ident="type" mode="change" usage="req"/>
               <!-- @cert allows to tag pages that have been corrected -->
               <attDef ident="cert" mode="change" usage="rec">
                 <valList type="closed" mode="change">
@@ -1295,8 +1200,32 @@ Custom:Entry#2
             </constraintSpec>
             <attList>
               <attDef ident="xml:id" mode="change" usage="req"/>
-              <attDef ident="corresp" mode="change" usage="req"/>
-              <attDef ident="ana" mode="change" usage="req"/>
+              <attDef ident="type" mode="change" usage="req">
+                <valList type="closed" mode="change">
+                  <valItem ident="CustomZone"/>
+                  <valItem ident="DamageZone"/>
+                  <valItem ident="DigitizationArtefactZone"/>
+                  <valItem ident="DropCapitalZone"/>
+                  <valItem ident="GraphicZone"/>
+                  <valItem ident="MainZone"/>
+                  <valItem ident="MarginTextZone"/>
+                  <valItem ident="MusicZone"/>
+                  <valItem ident="NumberingZone"/>
+                  <valItem ident="QuireMarksZone"/>
+                  <valItem ident="RunningTitleZone"/>
+                  <valItem ident="SealZone"/>
+                  <valItem ident="StampZone"/>
+                  <valItem ident="TableZone"/>
+                  <valItem ident="TitlePageZone"/>
+                  <valItem ident="CustomLine"/>
+                  <valItem ident="DefaultLine"/>
+                  <valItem ident="DropCapitalLine"/>
+                  <valItem ident="HeadingLine"/>
+                  <valItem ident="InterlinearLine"/>
+                  <valItem ident="MusicLine"/>
+                </valList>
+              </attDef>
+              <attDef ident="subtype" mode="change" usage="req"/>
               <attDef ident="points" mode="change" usage="req"/>
               <attDef ident="source" mode="change" usage="req"/>
             </attList>
@@ -1305,7 +1234,6 @@ Custom:Entry#2
           <elementSpec ident="path" mode="change">
             <attList>
               <attDef ident="xml:id" mode="change" usage="req"/>
-              <attDef ident="type" mode="change" usage="req"/>
               <attDef ident="points" mode="change" usage="req"/>
             </attList>
           </elementSpec>          

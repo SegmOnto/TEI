@@ -92,39 +92,12 @@
             <taxonomy xml:id="SegmOnto">
                <bibl>
                   <title>SegmOnto</title>
+                  <edition n="0.9"/>
                   <ptr target="https://github.com/segmonto"/>
                </bibl>
-               <category xml:id="SegmOntoZones">
-                  <catDesc xml:id="CustomZone">
-                     <title>CustomZone</title>
-                     <ptr target="https://github.com/SegmOnto/examples/blob/main/zones/CustomZone/CustomZone.md"/>
-                  </catDesc>
-                  <catDesc xml:id="DamageZone">
-                     <title>DamageZone</title>
-                     <ptr target="https://github.com/SegmOnto/examples/blob/main/zones/DamageZone/DamageZone.md"/>
-                  </catDesc>
-                  <catDesc xml:id="DigitizationArtefactZone">
-                     <title>DigitizationArtefactZone</title>
-                     <ptr target="https://github.com/SegmOnto/examples/blob/main/zones/DigitizationArtefactZone/DigitizationArtefactZone.md"/>
-                  </catDesc>
-                  <catDesc xml:id="DropCapitalZone">
-                     <title>DropCapitalZone</title>
-                     <ptr target="https://github.com/SegmOnto/examples/blob/main/zones/DropCapitalZone/DropCapitalZone.md"/>
-                  </catDesc>
-                  <catDesc xml:id="GraphicZone">
-                     <title>GraphicZone</title>
-                     <ptr target="https://github.com/SegmOnto/examples/blob/main/zones/GraphicZone/GraphicZone.md"/>
-                  </catDesc>
-               </category>
-               <category xml:id="SegmOntoLines">
-                  <catDesc xml:id="DefaultLine">
-                     <title>DefaultLine</title>
-                     <ptr target="https://github.com/SegmOnto/examples/blob/main/lines/DefaultLine/DefaultLine.md"/>
-                  </catDesc>
-               </category>
             </taxonomy>
          </classDecl>
-         <!-- Important to describe the gold GT -->
+         <!-- Important to describe the gold GT, not compulsory -->
          <editorialDecl corresp="#automaticTranscription">
             <!-- Add @status with closed values, for instance taken from Stutzmann classifiction of
                transcriptions?  -->
@@ -166,8 +139,7 @@
    <sourceDoc xml:id="automaticTranscription">
       <!-- Page -->
       <surface xml:id="p1"
-                  type="page"
-                   cert="gold">
+               cert="gold">
          <graphic url="url"/>
          <!-- Zone -->
          <!-- @xml:id are important for the conversion to RDF. It is made of:
@@ -177,24 +149,24 @@
             b pour baseline
             t pour transcription
             -->
-         <!-- @corresp points to a SegmOnto zone type, with a definition in SegmOnto's guidelines
+         <!-- @type points to a SegmOnto zone type, with a definition in SegmOnto's guidelines
                online, whose address is referenced in Taxonomy. It has a closed list of values. It
                is mandatory-->
-         <!-- @ana points to a SegmOnto subtype, defined in the teiHeader, in taxonomy.
+         <!-- @subtype points to a SegmOnto subtype, defined in the teiHeader, in taxonomy.
               It has an open list of values. It is not mandatory -->
          <!-- @n is the numbering of zones or lines. It is not mandatory -->
          <!-- @points has a modified value, without the comma because it is not x,y points -->
          <!-- @source points to an URI/IIIF manifest -->
          <zone xml:id="p1z1"
-                  corresp="#segmOntoZone"
-                  ana="#segmOntoZone:subtype"
+                  type="MainZone"
+                  subtype="#segmOntoZone:subtype"
                   n="1"
                   points="1,2 3,4 5,6"
                   source="uri">
             <!-- Mask of the line -->
             <zone xml:id="p1z1l1"
-                  corresp="#segmOntoLine"
-                  ana="#segmOntoLine:subtype"
+               type="DefaultLine"
+                  subtype="#segmOntoLine:subtype"
                   n="1"
                   points="1,2 3,4 5,6"
                   source="uri">
@@ -207,19 +179,18 @@
             </zone>
          </zone>
          <zone xml:id="p1z2"
-            corresp="#segmOntoZone"
-            ana="#segmOntoZone:subtype"
+            type="MainZone"
+            subtype="#segmOntoZone:subtype"
             n="1"
             points="1,2 3,4 5,6"
             source="uri">
             <zone xml:id="p1z2l2"
-               corresp="#segmOntoLine"
-               ana="#segmOntoLine:subtype"
+               type="DefaultLine"
+               subtype="#segmOntoLine:subtype"
                n="1"
                points="1,2 3,4 5,6"
                source="uri">
                <path xml:id="p1z2l1"
-                  type="baseline"
                   points="1,2 3,4 5,6"/>
                <line xml:id="p1b2l1">Some text</line>
             </zone>
@@ -230,8 +201,8 @@
          <graphic url="url"/>
          <!-- decoration without baseline -->
          <zone cert="high" xml:id="p2z1"
-            corresp="#segmOntoZone"
-            ana="#segmOntoLine:subtype"
+            type="GraphicZone"
+            subtype="#segmOntoLine:subtype"
             points="1,2 3,4 5,6"
             source="uri">
          </zone>

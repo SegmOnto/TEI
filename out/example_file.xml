@@ -31,8 +31,7 @@
                 </respStmt>
             </titleStmt>
             <extent>
-                <measure unit="images" n="95"/>
-                <measure unit="words" n="16143"/>
+                <measure unit="images" n="1"/>
             </extent>
             <publicationStmt>
                 <publisher>SegmOnto project</publisher>
@@ -52,7 +51,7 @@
                     <title>Le Cid, tragi-comédie (par P. Corneille)</title>
                     <pubPlace ref="2988507">Paris</pubPlace>
                     <publisher>A. Courbé et P. Le Petit</publisher>
-                    <date when="1642">1642</date>
+                    <date when="1644">1644</date>
                 </bibl>
                 <msDesc>
                     <msIdentifier>
@@ -62,11 +61,14 @@
                         <idno>bpt6k1280251v</idno>
                     </msIdentifier>
                     <physDesc>
+                        <handDesc>
+                            <handNote rend="L2R">
+                                <p>Antiqua</p>
+                            </handNote>
+                        </handDesc>
                         <decoDesc>
                             <decoNote xml:id="id_DB_imprimeurs">
-                                <p>Les décorations, ornementations, illustrations, initiales liées à cet id proviennent
-                                    de l'atelier de Jean-Baptiste COIGNARD
-                                </p>
+                                <p>Atelier atelier de Denis Houssaye</p>
                             </decoNote>
                         </decoDesc>
                     </physDesc>

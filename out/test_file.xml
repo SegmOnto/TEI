@@ -14,19 +14,15 @@
                <persName>
                   <forename>Jean</forename>
                   <surname>Martin</surname>
+                  <ref type="isni" target="0000000121296128"/>
                </persName>
             </author>
-            <editor xml:id="MM">
-               <persName>
-                  <forename>Micheline</forename>
-                  <surname>Martin</surname>
-               </persName>
-            </editor>
             <respStmt xml:id="JD1">
                <resp>annotated by</resp>
                <persName>
                   <forename>John</forename>
                   <surname>Doe</surname>
+                  <ref type="orcid" target="0000-0000-0000-0000"/>
                </persName>
             </respStmt>
             <respStmt xml:id="JD2">
@@ -34,6 +30,7 @@
                <persName>
                   <forename>Jane</forename>
                   <surname>Doe</surname>
+                  <ref type="orcid" target="0000-0000-0000-0000"/>
                </persName>
             </respStmt>
          </titleStmt>
@@ -71,6 +68,20 @@
                   <repository>Library/archive</repository>
                   <idno>Shelfmark</idno>
                </msIdentifier>
+               <physDesc>
+                  <handDesc>
+                     <!-- @rend Left to right, right to left… -->
+                     <handNote rend="L2R">
+                        <!-- type of script: antiqua, textura, gothic, humanist, caroline… -->
+                        <p>Antiqua</p>
+                     </handNote>
+                  </handDesc>
+                  <decoDesc>
+                     <decoNote xml:id="id_DB_imprimeurs">
+                        <p>Atelier de… Maître de…</p>
+                     </decoNote>
+                  </decoDesc>
+               </physDesc>
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -98,7 +109,7 @@
             </taxonomy>
          </classDecl>
          <!-- Important to describe the gold GT, not compulsory -->
-         <editorialDecl corresp="#automaticTranscription">
+         <editorialDecl corresp="gold">
             <!-- Add @status with closed values, for instance taken from Stutzmann classifiction of
                transcriptions?  -->
             <correction>
@@ -136,7 +147,7 @@
       </revisionDesc>
    </teiHeader>
    <!-- automatic transcription -->
-   <sourceDoc xml:id="automaticTranscription">
+   <sourceDoc>
       <!-- Page -->
       <surface xml:id="p1"
                cert="gold">

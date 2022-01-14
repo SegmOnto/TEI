@@ -1143,22 +1143,6 @@ Custom:Entry#2
             </attList>
           </elementSpec>
           
-          <!-- SourceDoc -->
-          <elementSpec ident="sourceDoc" mode="change">
-            <constraintSpec ident="id_check" scheme="schematron">
-              <constraint>
-                <sch:rule context="tei:sourceDoc">
-                  <sch:assert test="@xml:id='automaticTranscription'"
-                    >Element "sourceDoc" incomplete; missing attribute "@xml:id" and value "automaticTranscription".</sch:assert>
-                </sch:rule>
-              </constraint>
-            </constraintSpec>
-            <attList>
-              <attDef ident="xml:id" mode="change" usage="req">
-              </attDef>
-            </attList>
-          </elementSpec>
-          
           <elementSpec ident="surface" mode="change">
             <!-- If a surface, it requires the graphic element in it -->
             <constraintSpec ident="line_path_check" scheme="schematron">

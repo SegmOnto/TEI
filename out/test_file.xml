@@ -34,6 +34,11 @@
                </persName>
             </respStmt>
          </titleStmt>
+         <!-- Size of the file -->
+         <extent>
+            <measure unit="images" n="1"/>
+            <measure unit="words" n="100"/>
+         </extent>
          <!-- publicationStmt is mandatory -->
          <publicationStmt>
             <publisher>SegmOnto project</publisher>

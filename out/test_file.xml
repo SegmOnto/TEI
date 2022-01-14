@@ -239,7 +239,7 @@
             <lb corresp="#lineID"/>line
          </note>
          <p corresp="#mainID">
-            <hi corresp="#initialeID"/>
+            <hi><lb corresp="#initialeID"/>line</hi>
             <lb corresp="#lineID"/>line
             <lb corresp="#lineID"/>line
             <figure corresp="#decorationID"/>

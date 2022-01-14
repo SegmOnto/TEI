@@ -165,31 +165,31 @@
                     <path xml:id="CorneilleLe1642_0013_BT2_1_LT1_4_1" points="220,1369 1401,1352 1485,1315"/>
                     <line>COMBALET</line>
                 </zone>
-                <zone xml:id="CorneilleLe1642_0013_BT2_1_LT2_5" n="5" type="DefaultLine" subtype="none"
+                <zone xml:id="CorneilleLe1642_0013_BT2_1_LT2_5" n="6" type="DefaultLine" subtype="none"
                     points="583,1766 583,1685 600,1695 637,1675 656,1690 708,1670 737,1700 801,1700 830,1673 867,1692 911,1675 965,1692 1017,1666 1090,1663 1093,1786 1066,1776 1026,1790 997,1781 948,1790 931,1776 843,1805 823,1798 799,1813 715,1795 661,1837 585,1837"
                     source="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1280251v/f0013/583,1663,510,174/full/0/native">
                     <path xml:id="CorneilleLe1642_0013_BT2_1_LT2_5_1" points="583,1766 977,1759 1093,1768"/>
                     <line>ADAME</line>
                 </zone>
-                <zone xml:id="CorneilleLe1642_0013_BT2_1_LT1_6" n="6" type="DefaultLine" subtype="none"
+                <zone xml:id="CorneilleLe1642_0013_BT2_1_LT1_6" n="7" type="DefaultLine" subtype="none"
                     points="328,2016 328,1962 382,1945 404,1947 431,1974 453,1964 470,1974 566,1974 575,1962 617,1969 644,1945 681,1935 737,1972 818,1972 850,1969 870,1952 936,1933 963,1952 987,1955 1014,1937 1058,1964 1117,1937 1137,1952 1169,1955 1200,1940 1227,1952 1252,1935 1279,1950 1330,1937 1345,1952 1419,1928 1522,1928 1522,2033 1374,2033 1343,2016 1272,2035 1230,2018 1210,2028 1144,2018 1117,2035 1046,2021 1022,2023 1007,2038 973,2038 943,2021 892,2031 857,2023 818,2040 776,2040 764,2031 742,2040 725,2023 676,2023 639,2038 605,2026 571,2043 416,2043 328,2026"
                     source="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1280251v/f0013/328,1928,1194,115/full/0/native">
                     <path xml:id="CorneilleLe1642_0013_BT2_1_LT1_6_1" points="328,2016 1313,2004 1524,2013"/>
                     <line>Ce portrait viuant que ie vous offre,</line>
                 </zone>
-                <zone xml:id="CorneilleLe1642_0013_BT2_1_LT1_7" n="7" type="DefaultLine" subtype="none"
+                <zone xml:id="CorneilleLe1642_0013_BT2_1_LT1_7" n="8" type="DefaultLine" subtype="none"
                     points="230,2111 235,2067 303,2062 330,2072 357,2060 384,2075 411,2050 453,2077 598,2077 632,2060 647,2075 683,2075 710,2048 754,2048 774,2065 789,2058 823,2075 921,2075 953,2048 1014,2048 1036,2062 1075,2058 1093,2067 1142,2055 1208,2072 1267,2058 1286,2070 1318,2070 1348,2045 1504,2043 1514,2048 1517,2092 1514,2119 1401,2121 1352,2143 1321,2143 1298,2121 1269,2126 1249,2143 1203,2143 1169,2121 1110,2126 1088,2143 999,2131 970,2146 916,2146 877,2124 845,2136 806,2124 786,2138 764,2124 713,2136 698,2124 664,2124 649,2136 642,2129 590,2143 504,2126 450,2143 409,2129 387,2148 230,2141"
                     source="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1280251v/f0013/230,2043,1287,105/full/0/native">
                     <path xml:id="CorneilleLe1642_0013_BT2_1_LT1_7_1" points="230,2111 1078,2119 1517,2092"/>
                     <line>repreſente vn Heros aſſeZ recognoiſſable</line>
                 </zone>
-                <zone xml:id="CorneilleLe1642_0013_BT2_1_LT1_8" next="8" type="DefaultLine" subtype="none"
+                <zone xml:id="CorneilleLe1642_0013_BT2_1_LT1_8" next="9" type="DefaultLine" subtype="none"
                     points="232,2212 232,2180 272,2160 296,2168 308,2156 335,2156 360,2175 382,2153 416,2153 441,2178 507,2178 541,2163 563,2175 595,2163 610,2175 639,2175 676,2148 710,2148 742,2168 813,2160 828,2146 874,2146 909,2168 938,2143 955,2143 987,2168 1031,2143 1080,2160 1124,2153 1144,2165 1252,2163 1281,2141 1311,2143 1333,2163 1352,2163 1377,2143 1387,2153 1416,2143 1443,2158 1468,2146 1495,2160 1524,2133 1524,2205 1492,2217 1470,2207 1443,2222 1360,2205 1262,2219 1237,2207 1198,2227 1093,2209 1063,2229 1048,2219 1007,2227 995,2217 936,2231 872,2231 860,2222 840,2231 796,2214 781,2229 676,2234 647,2222 615,2236 580,2224 573,2234 551,2227 536,2236 492,2222 463,2239 428,2222 340,2231 318,2224 269,2241 235,2224"
                     source="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1280251v/f0013/232,2133,1292,108/full/0/native">
                     <path xml:id="CorneilleLe1642_0013_BT2_1_LT1_8_1" points="232,2212 1012,2207 1526,2185"/>
                     <line>aux lauriers dont il eſt couuert. Sa vie a</line>
                 </zone>
-                <zone xml:id="CorneilleLe1642_0013_BT2_1_LT1_9" n="9" type="DefaultLine" subtype="none"
+                <zone xml:id="CorneilleLe1642_0013_BT2_1_LT1_9" n="10" type="DefaultLine" subtype="none"
                     points="247,2329 247,2261 262,2263 284,2241 350,2241 370,2261 392,2256 411,2268 507,2268 546,2246 590,2266 953,2263 977,2258 999,2236 1088,2246 1144,2236 1176,2256 1205,2258 1257,2234 1338,2234 1394,2258 1431,2236 1450,2251 1470,2241 1514,2261 1517,2307 1507,2349 1480,2349 1465,2334 1392,2349 1362,2334 1340,2337 1323,2320 1223,2320 1173,2322 1147,2342 1137,2332 1117,2342 1095,2325 1061,2332 1051,2322 958,2322 931,2342 911,2334 867,2344 791,2329 735,2342 715,2325 674,2325 561,2356 428,2356 384,2327 340,2356 247,2356"
                     source="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1280251v/f0013/247,2234,1270,122/full/0/native">
                     <path xml:id="CorneilleLe1642_0013_BT2_1_LT1_9_1" points="247,2329 348,2310 1048,2300 1517,2307"/>
@@ -199,21 +199,21 @@
             <zone xml:id="CorneilleLe1642_0013_BT12_2" type="QuireMarksZone" subtype="none"
                 points="1208,2391 1206,2374 1204,2340 1277,2343 1294,2332 1328,2340 1333,2424 1210,2415"
                 source="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1280251v/f0013/1166,2342,204,115/full/0/native">
-                <zone xml:id="CorneilleLe1642_0013_BT12_2_LT1_1" type="DefaultLine" subtype="none"
+                <zone xml:id="CorneilleLe1642_0013_BT12_2_LT1_1" n="10" type="DefaultLine" subtype="none"
                     points="1208,2391 1206,2374 1204,2340 1277,2343 1294,2332 1328,2340 1333,2424 1210,2415"
                     source="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1280251v/f0013/1204,2332,129,92/full/0/native">
                     <path xml:id="CorneilleLe1642_0013_BT12_2_LT1_1_1" points="1210,2393 1328,2391"/>
                     <line>ā ij</line>
                 </zone>
             </zone>
-            <zone xml:id="CorneilleLe1642_0013_BT4_3" type="GraphicZone" subtype="none"
+            <zone xml:id="CorneilleLe1642_0013_BT4_3" type="GraphicZone" subtype="headpiece"
                 points="1497,225 1487,467 958,507 176,497 166,284 196,235 1254,205"
                 source="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1280251v/f0013/166,205,1331,302/full/0/native"/>
             <zone xml:id="CorneilleLe1642_0013_BT5_4" type="DropCapitalZone" subtype="none"
                 points="227,1563 221,1849 523,1859 528,1544"
                 source="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1280251v/f0013/221,1544,307,315/full/0/native"
                  ana="doit pointer vers xml:id dans decoNote">
-                <zone xml:id="CorneilleLe1642_0013_BT5_4_LT2_1" type="DropCapitalLine" subtype="none"
+                <zone xml:id="CorneilleLe1642_0013_BT5_4_LT2_1" n="5" type="DropCapitalLine" subtype="none"
                     points="257,1783 254,1631 281,1588 352,1663 496,1586 473,1661 478,1813 427,1818 367,1823 282,1808"
                     source="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1280251v/f0013/254,1586,242,237/full/0/native">
                     <path xml:id="CorneilleLe1642_0013_BT5_4_LT2_1_1" points="259,1786 480,1783"/>
@@ -224,6 +224,10 @@
     </sourceDoc>
     <text>
         <body>
+            <pb facs="CorneilleLe1642_0013"/>
+            
+            <figure  type="headpiece" facs="#CorneilleLe1642_0013_BT4_3"/>
+            
             <p facs="#CorneilleLe1642_0013_BT2_1">
                 <seg type="heading">
                     <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_1"/>A
@@ -237,10 +241,11 @@
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_8"/>aux lauriers dont il eſt couuert. Sa vie a
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_9"/>eſté vne suitte continuelle de victoirees,
             </p>
+            
             <fw facs="#CorneilleLe1642_0013_BT12_2">
                 <lb facs="#CorneilleLe1642_0013_BT12_2_LT1_1"/>ā ij
             </fw>
-            <figure facs="#CorneilleLe1642_0013_BT4_3" hand="à remplir"/>
+            
         </body>
     </text>
 </TEI>

@@ -168,7 +168,7 @@
                 <zone xml:id="CorneilleLe1642_0013_BT2_1_LT2_5" n="6" type="DefaultLine" subtype="none"
                     points="583,1766 583,1685 600,1695 637,1675 656,1690 708,1670 737,1700 801,1700 830,1673 867,1692 911,1675 965,1692 1017,1666 1090,1663 1093,1786 1066,1776 1026,1790 997,1781 948,1790 931,1776 843,1805 823,1798 799,1813 715,1795 661,1837 585,1837"
                     source="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1280251v/f0013/583,1663,510,174/full/0/native">
-                    <path xml:id="CorneilleLe1642_0013_BT2_1_LT2_5_1" points="583,1766 977,1759 1093,1768"/>
+                    <path xml:id="CorneilleLe1642_0013_BT2_1_LT1_5" points="583,1766 977,1759 1093,1768"/>
                     <line>ADAME</line>
                 </zone>
                 <zone xml:id="CorneilleLe1642_0013_BT2_1_LT1_6" n="7" type="DefaultLine" subtype="none"
@@ -196,7 +196,7 @@
                     <line>eſté vne suitte continuelle de victoires,</line>
                 </zone>
             </zone>
-            <zone xml:id="CorneilleLe1642_0013_BT12_2" type="QuireMarksZone" subtype="none"
+            <zone xml:id="CorneilleLe1642_0013_BT12_2" type="QuireMarksZone" subtype="signature"
                 points="1208,2391 1206,2374 1204,2340 1277,2343 1294,2332 1328,2340 1333,2424 1210,2415"
                 source="https://gallica.bnf.fr/iiif/ark:/12148/bpt6k1280251v/f0013/1166,2342,204,115/full/0/native">
                 <zone xml:id="CorneilleLe1642_0013_BT12_2_LT1_1" n="10" type="DefaultLine" subtype="none"
@@ -377,30 +377,39 @@
             <pb facs="CorneilleLe1642_0013"/>
             
             <!-- GraphicZone -> figure -->
+            <!-- le subtype SegmOnto devient un type -->
             
-            <figure  type="headpiece" facs="#CorneilleLe1642_0013_BT4_3"/>
+            <figure type="headpiece" facs="#CorneilleLe1642_0013_BT4_3"/>
+            
+            <!-- MainZone -> p -->
             
             <p facs="#CorneilleLe1642_0013_BT2_1">
-                <seg type="heading">
-                    <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_1"/>A
-                    <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_2"/>MADAME
-                    <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_3"/>DE
-                    <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_4"/>COMBALET
-                    <!-- DropCapitalLine -> hi -->
-                    <hi><lb facs="#CorneilleLe1642_0013_BT5_1_LT2_5"/>M</hi>
-                    <lb facs="#CorneilleLe1642_0013_BT2_1_LT2_5"/>ADAME,
-                </seg>
+                <!-- HeadingLine -> rend="heading" -->
+                <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_1" rend="heading"/>A
+                <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_2" rend="heading"/>MADAME
+                <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_3" rend="heading"/>DE
+                <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_4" rend="heading"/>COMBALET
+                <!-- DropCapitalLine -> hi -->
+                <hi facs="#CorneilleLe1642_0013_BT5_4_LT2_1_1">M</hi>
+                <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_5" rend="heading"/>ADAME,
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_6"/>Ce portrait viuant que ie vous offre,
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_7"/>repreſente vn Heros aſſeZ recognoiſſable
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_8"/>aux lauriers dont il eſt couuert. Sa vie a
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_9"/>eſté vne suitte continuelle de victoirees,
             </p>
             
-            <fw facs="#CorneilleLe1642_0013_BT12_2">
+            <!-- QuireMarksZone -> fw -->
+            <!-- le subtype SegmOnto devient un type -->
+            
+            <fw facs="#CorneilleLe1642_0013_BT12_2" type="signature">
                 <lb facs="#CorneilleLe1642_0013_BT12_2_LT1_1"/>ā ij
             </fw>
             
+            <!-- surface -> pb -->
+            
             <pb facs="CorneilleLe1642_0014"/>
+            
+            <!-- MainZone -> p -->
             
             <p facs="#CorneilleLe1642_0014_BT2_1">
                 <lb facs="#CorneilleLe1642_0014_BT2_1_LT1_1"/>son corps porté dans ſon armée a gaigné

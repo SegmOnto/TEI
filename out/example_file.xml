@@ -224,18 +224,23 @@
     </sourceDoc>
     <text>
         <body>
+            <!-- surface -> pb -->
             <pb facs="CorneilleLe1642_0013"/>
+            
+            <!-- GraphicZone -> figure -->
             
             <figure  type="headpiece" facs="#CorneilleLe1642_0013_BT4_3"/>
             
             <p facs="#CorneilleLe1642_0013_BT2_1">
                 <seg type="heading">
                     <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_1"/>A
-                <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_2"/>MADAME
-                <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_3"/>DE
-                <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_4"/>COMBALET
-                <hi facs="#CorneilleLe1642_0013_BT5_1_LT2_5">M</hi>
-                <lb facs="#CorneilleLe1642_0013_BT2_1_LT2_5"/>ADAME,</seg>
+                    <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_2"/>MADAME
+                    <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_3"/>DE
+                    <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_4"/>COMBALET
+                    <!-- DropCapitalLine -> hi -->
+                    <hi><lb facs="#CorneilleLe1642_0013_BT5_1_LT2_5"/>M</hi>
+                    <lb facs="#CorneilleLe1642_0013_BT2_1_LT2_5"/>ADAME,
+                </seg>
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_6"/>Ce portrait viuant que ie vous offre,
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_7"/>repreſente vn Heros aſſeZ recognoiſſable
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_8"/>aux lauriers dont il eſt couuert. Sa vie a

@@ -11,7 +11,7 @@
                     <persName>
                         <forename>Pierre</forename>
                         <surname>Corneille</surname>
-                        <ref type="isni" target="0000000121296128"/>
+                       <ptr type="isni" target="0000000121296128"/>
                     </persName>
                 </author>
                 <respStmt xml:id="CJ">
@@ -19,7 +19,7 @@
                     <persName>
                         <forename>Jahan</forename>
                         <surname>Claire</surname>
-                        <ref type="orcid" target="0000-0001-7268-9706"/>
+                        <ptr type="orcid" target="0000-0001-7268-9706"/>
                     </persName>
                 </respStmt>
                 <respStmt xml:id="SG">
@@ -27,7 +27,7 @@
                     <persName>
                         <forename>Simon</forename>
                         <surname>Gabay</surname>
-                        <ref type="orcid" target="0000-0001-9094-4475"/>
+                        <ptr type="orcid" target="0000-0001-9094-4475"/>
                     </persName>
                 </respStmt>
             </titleStmt>
@@ -47,7 +47,7 @@
             </seriesStmt>
             <sourceDesc>
                 <bibl>
-                    <ref target="http://catalogue.bnf.fr/ark:/12148/cb302714564"/>
+                    <ptr target="http://catalogue.bnf.fr/ark:/12148/cb302714564"/>
                     <author>Corneille, Pierre</author>
                     <title>Le Cid, tragi-comédie (par P. Corneille)</title>
                     <pubPlace ref="2988507">Paris</pubPlace>
@@ -68,7 +68,7 @@
                             </handNote>
                         </handDesc>
                         <decoDesc>
-                            <decoNote xml:id="id_DB_imprimeurs">
+                            <decoNote>
                                 <p>Atelier atelier de Denis Houssaye</p>
                             </decoNote>
                         </decoDesc>
@@ -225,12 +225,13 @@
     <text>
         <body>
             <p facs="#CorneilleLe1642_0013_BT2_1">
-                <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_1"/>A
+                <seg type="heading">
+                    <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_1"/>A
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_2"/>MADAME
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_3"/>DE
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_4"/>COMBALET
                 <hi facs="#CorneilleLe1642_0013_BT5_1_LT2_5">M</hi>
-                <lb facs="#CorneilleLe1642_0013_BT2_1_LT2_5"/>ADAME,
+                <lb facs="#CorneilleLe1642_0013_BT2_1_LT2_5"/>ADAME,</seg>
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_6"/>Ce portrait viuant que ie vous offre,
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_7"/>repreſente vn Heros aſſeZ recognoiſſable
                 <lb facs="#CorneilleLe1642_0013_BT2_1_LT1_8"/>aux lauriers dont il eſt couuert. Sa vie a

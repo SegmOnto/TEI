@@ -14,7 +14,7 @@
                <persName>
                   <forename>Jean</forename>
                   <surname>Martin</surname>
-                  <ref type="isni" target="0000000121296128"/>
+                  <ptr type="isni" target="0000000121296128"/>
                </persName>
             </author>
             <respStmt xml:id="JD1">
@@ -22,7 +22,7 @@
                <persName>
                   <forename>John</forename>
                   <surname>Doe</surname>
-                  <ref type="orcid" target="0000-0000-0000-0000"/>
+                  <ptr type="orcid" target="0000-0000-0000-0000"/>
                </persName>
             </respStmt>
             <respStmt xml:id="JD2">
@@ -30,7 +30,7 @@
                <persName>
                   <forename>Jane</forename>
                   <surname>Doe</surname>
-                  <ref type="orcid" target="0000-0000-0000-0000"/>
+                  <ptr type="orcid" target="0000-0000-0000-0000"/>
                </persName>
             </respStmt>
          </titleStmt>
@@ -82,7 +82,7 @@
                      </handNote>
                   </handDesc>
                   <decoDesc>
-                     <decoNote xml:id="id_DB_imprimeurs">
+                     <decoNote>
                         <p>Atelier de… Maître de…</p>
                      </decoNote>
                   </decoDesc>
